@@ -1,10 +1,4 @@
 -
-  image: 'Nozstock.jpg'
-  name: 'Nozstock Festival 2013'
-  venue: 'Bromyard, Herefordshire'
-  date: '26-28th July 2013'
-  website: 'https://www.facebook.com/nozstockthehiddenvalley'
--
   image: 'BoomTown2013.jpg'
   name: 'BoomTown Festival'
   venue: '8th - 11th August 2013'
@@ -16,6 +10,12 @@
   venue: 'Riverside Caravan Park'
   date: 'Sat 3rd Aug'
   website: 'http://www.riversideswansea.com'
+-
+  image: 'Nozstock.jpg'
+  name: 'Nozstock Festival 2013'
+  venue: 'Bromyard, Herefordshire'
+  date: '26-28th July 2013'
+  website: 'https://www.facebook.com/nozstockthehiddenvalley'
 -
   image: 'RiversidePoster.jpg'
   name: 'Disco Panther at Riverside'
@@ -29,16 +29,16 @@
   date: 'Sat 18th May'
   website: 'http://www.maggiescentres.org'
 -
+  name: 'May The 4th Be With You'
+  venue: 'The Office, Swansea'
+  date: '4th May 2013'
+  image: 'MayThe4th.jpg'
+-
   image: 'NewbridgeHotel.jpg'
   name: 'Newbridge Hotel'
   venue: 'Newbridge Hotel, Newbridge'
   date: '29th March'
   website: 'http://www.thenewbridgehotel.co.uk/'
--
-  name: 'Disco Panther @ The Office'
-  venue: 'The Office Pub, Swansea'
-  date: '4th May 2013'
-  image: 'TheOfficePoster.jpg'
 -
   image: 'CraigCharlesGarage.jpeg'
   name: 'Craig Charles &amp; Disco Panther'
