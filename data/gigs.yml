@@ -29,10 +29,17 @@
   date: 'Sat 18th May'
   website: 'http://www.maggiescentres.org'
 -
+<<<<<<< HEAD
   name: 'May The 4th Be With You'
   venue: 'The Office, Swansea'
   date: '4th May 2013'
   image: 'MayThe4th.jpg'
+=======
+  name: 'Disco Panther @ The Office'
+  venue: 'The Office Pub, Swansea'
+  date: '4th May 2013'
+  image: 'TheOfficePoster.jpg'
+>>>>>>> abeeeef028e0c89d51c79feb20d8b1a91db094d0
 -
   image: 'NewbridgeHotel.jpg'
   name: 'Newbridge Hotel'
