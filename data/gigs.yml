@@ -1,0 +1,93 @@
+-
+  image: 'Nozstock.jpg'
+  name: 'Nozstock Festival 2013'
+  venue: 'Bromyard, Herefordshire'
+  date: '26-28th July 2013'
+  website: 'https://www.facebook.com/nozstockthehiddenvalley'
+-
+  image: 'BoomTown2013.jpg'
+  name: 'BoomTown Festival'
+  venue: '8th - 11th August 2013'
+  website: 'http://www.boomtownfair.co.uk/'
+  fb_event: 'https://www.facebook.com/boomtownfair1'
+-
+  image: 'RiversidePoster.jpg'
+  name: 'Disco Panther at Riverside'
+  venue: 'Riverside Caravan Park'
+  date: 'Sat 3rd Aug'
+  website: 'http://www.riversideswansea.com'
+-
+  image: 'RiversidePoster.jpg'
+  name: 'Disco Panther at Riverside'
+  venue: 'Riverside Caravan Park'
+  date: 'Sat 24th May'
+  website: 'http://www.riversideswansea.com'
+-
+  image: 'logo-maggies.jpg'
+  name: 'Maggies Cancer Charity Event'
+  venue: 'Waterfront Museum, Swansea'
+  date: 'Sat 18th May'
+  website: 'http://www.maggiescentres.org'
+-
+  image: 'NewbridgeHotel.jpg'
+  name: 'Newbridge Hotel'
+  venue: 'Newbridge Hotel, Newbridge'
+  date: '29th March'
+  website: 'http://www.thenewbridgehotel.co.uk/'
+-
+  name: 'Disco Panther @ The Office'
+  venue: 'The Office Pub, Swansea'
+  date: '4th May 2013'
+  image: 'TheOfficePoster.jpg'
+-
+  image: 'CraigCharlesGarage.jpeg'
+  name: 'Craig Charles &amp; Disco Panther'
+  venue: 'The Garage Venue, Swansea'
+  date: '1st March 2013'
+  fb_event: 383775535049527
+-
+  image: 'NYE2012.jpeg'
+  name: 'New Years Knees Up'
+  venue: 'The Garage Venue, Swansea'
+  date: '31st December 2012'
+  fb_event: 223935737739382
+-
+  image: 'Monkey2012.jpeg'
+  name: 'Wonka Vision Xmas Party'
+  venue: 'Monkey Cafe, Swansea'
+  date: '15th December 2012'
+  fb_event: 254364364690475
+-
+  image: 'Hobos.jpeg'
+  name: 'Hobos 20th Birthday Party'
+  venue: 'Sin City, Swansea'
+  date: '24th November 2012'
+-
+  image: 'JujuNations.jpeg'
+  name: 'JuJu Nations'
+  venue: 'Gwdihw Bar, Cardiff'
+  date: '3rd November 2012'
+  fb_event: 454915471218177
+-
+  image: 'Cinders.jpeg'
+  name: 'Cinderellas'
+  venue: 'Cinderellas'
+  date: '13th October 2012'
+-
+  image: '5thOct2012.jpeg'
+  name: 'Funk Junkkies Presents'
+  venue: 'The Garage Venue, Swansea'
+  date: '5th October 2012'
+  fb_event: 516557155025464
+-
+  image: 'Nozstock.jpg'
+  name: 'Nozstock Festival 2012'
+  venue: 'The Farm, Rowden Paddocks, Bromyard, Herefordshire, HR7 4LS'
+  date: '27 - 29 July 2012'
+  fb_event: 149020805166318
+-
+  image: 'HaggisHorns.jpeg'
+  name: 'Funk Junkkies'
+  venue: 'The Garage Venue, Swansea'
+  date: '6th April 2012'
+  fb_event: 308093859244232

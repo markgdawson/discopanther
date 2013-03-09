@@ -1,0 +1,13 @@
+$default-border-radius: 15px
+@import "compass/css3/border-radius"
+
+body.contact
+  form
+    border: 2px solid white
+    @include border-radius(5px, 5px)
+    padding: 30px
+    margin-top: 10px
+    margin-bottom: 10px
+    min-height: 276px
+    input, textarea
+      min-width: 250px

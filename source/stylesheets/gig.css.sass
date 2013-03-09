@@ -1,0 +1,54 @@
+// Parameters
+$image_width: 214px
+$image_height: 296px
+$description_total_width: 700px
+$image_horizontal_offset: 20px
+$description_padding: 30px
+$description_padding_top: 15px
+$spacing_between_boxes: 30px
+$default-border-radius: 15px
+
+@import "compass/css3/border-radius"
+
+div.profile, div.gig
+  clear: both
+  color: white
+  position: relative
+  margin: $spacing_between_boxes 0
+  img.profile, img.poster, img.rollover
+    border: 1px solid white
+    height: $image_height
+    width: $image_width
+    position:  absolute
+    top: 0
+    z-index: 99
+  img.profile:hover
+    cursor: pointer
+    cursor: hand
+  .description
+    position: relative
+    border: 2px solid white
+    @include border-radius
+    padding: 0px $description_padding
+    margin-top: $description_padding_top
+    margin-bottom: $description_padding_top
+    min-height: $image_height - $description_padding_top - $description_padding_top
+    h1, p
+      margin-top: 15px
+    p.latin
+      font-style: italic
+      margin-top: 0px
+  &.even
+    float: left
+    .description
+      width: $description_total_width - $image_width
+      padding-left: $image_width + $image_horizontal_offset + $image_horizontal_offset
+    img
+      left: $image_horizontal_offset
+  &.odd
+    float: left
+    .description
+      width: $description_total_width - $image_width
+      padding-right: $image_width + $image_horizontal_offset + $image_horizontal_offset
+    img
+      right: $image_horizontal_offset

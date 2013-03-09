@@ -1,0 +1,50 @@
+ul#menu
+  background: url("images/main_header.gif") no-repeat center -186px
+  text-align: center
+  margin: 0 auto
+  width: 800px
+  height: 37px
+  a
+    height: 30px
+    display: block
+    text-indent: -99999px
+    float: left
+  li
+    float: left
+    list-style-type: none
+    &.menuitem:hover, &.selected
+      border-bottom: 2px solid white
+    &#menu-fb, &#menu-soundcloud, &#menu-twitter
+      a:hover
+        background: url("images/logos.gif") no-repeat center 0
+    &#menu-fb a:hover
+      background-position-x: 10px
+    &#menu-soundcloud a:hover
+      background-position-x: -80px
+    &#menu-twitter a:hover
+      background-position-x: -40px
+    a.menuitem
+      width: 150px
+      list-style-type: none
+    &#menu-fb a
+      width: 42px
+    &#menu-twitter a, &#menu-soundcloud a
+      width: 32px
+    &#menu-1 a
+      width: 70px
+      background-position-y: 0
+    &#menu-2 a
+      width: 102px
+      background-position-x: -127px
+    &#menu-3 a
+      width: 60px
+      background-position-x: -290px
+    &#menu-4 a
+      width: 67px
+      background-position-x: -418px
+    &#menu-5 a
+      width: 137px
+      background-position-x: -526px
+    &#menu-6 a
+      width: 125px
+      background-position-x: -653px

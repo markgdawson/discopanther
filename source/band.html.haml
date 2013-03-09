@@ -1,0 +1,47 @@
+.profile_description
+  %p
+    Way back in 2012, some cats stumbled upon each other and felt compelled to show the world what a good time should be: Sexy and damn right Groovy. Unfortunately, as individuals, they had no power to do so, and were overshadowed by other "Music" (such as pop, dubstep and metal). What could they do? Mightily morph into a single big cat....... Enter DISCO PANTHER
+    
+- data.panthers.each_with_index do |panther, index|
+  .profile{:class => (index%2 == 0 ? "even" : "odd")}
+    %img.rollover{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}3.png", :width => '180px' }
+    %img.rollover{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}2.png", :width => '180px' }
+    %img.profile{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}.png", :width => '180px' }
+    .description
+      %h1=panther["name"]
+      %p.latin=panther["latin"]
+      %p=panther["bio"]
+      - if panther.has_key?("fb_event")
+        %a.fb_event{:href => "https://www.facebook.com/events/#{panther["fb_event"]}", :alt => "Join Facebook Event" }
+      - if panther.has_key?("website")
+        %a.website{:href => panther["website"]}= "Visit Website"
+:javascript
+  $(function() {
+    profileImages = $('img.profile');
+    var originalLeftEdgePosition;
+    animateWidth = profileImages.first().width()+45;
+    profileImages.hover(function() {
+      
+      originalLeftEdgePosition = $(this).position()["left"];
+      rolloverImages = $(this).siblings('img.rollover');
+      
+      rolloverImages.css({ left: originalLeftEdgePosition+'px'});
+      
+      if(originalLeftEdgePosition > 500)
+      {
+        direction = -1;
+      } else {
+        direction = 1;
+      }
+      rolloverImages.first().animate({ left: (originalLeftEdgePosition+direction*animateWidth)+'px' });
+      rolloverImages.last().animate({ left: (originalLeftEdgePosition+direction*animateWidth*2)+'px' });
+      $(this).siblings('.description').animate({ left : direction*5000+'px', opacity: 0 });
+    },function() {
+      originalLeftEdgePosition = $(this).position()["left"];
+      rolloverImages = $(this).siblings('img.rollover');
+      
+      rolloverImages.animate({ left: originalLeftEdgePosition+'px' });
+      
+      $(this).siblings('.description').animate({ left : '0px', opacity: 1 });
+    })
+  });

@@ -1,0 +1,24 @@
+.contact_form_errors
+  = partial(:contact_form_errors)
+
+%form{:action => "contact.php", :method => "POST", :name => "contactform"}
+  %p
+    %label{:for => "name"} Name:
+    %br/
+    %input{:name => "name", :type => "text"}/
+  %p
+    %label{:for => "email"} Email Address:
+    %br/
+    %input{:name => "email", :type => "text"}/
+    %br/
+  %p
+    %label{:for => "email"} Phone Number:
+    %br/
+    %input{:name => "tel", :type => "text"}/
+    %br/
+  %p
+    %label{:for => "message"} Message:
+    %br/
+    %textarea{:name => "message", :rows => "10"}
+  %input{:name => "Submit", :type => "submit", :value => "Submit"}/
+  %br/
