@@ -1,5 +1,5 @@
 jQuery ->
-  if $('body.band').lenght != 0
+  if $('body.band').length != 0
     #Storing page elements to local variables
     profileImages = $ 'img.profile'
     animateWidth = profileImages.first().width()+45
@@ -19,7 +19,6 @@ jQuery ->
       ).each ->
         if this.complete
           $(this).trigger 'load'
-      
 
       rolloverImages.prependTo $(this)
 
@@ -57,3 +56,4 @@ jQuery ->
           left : '0px'
           opacity: 1
     )
+    
