@@ -7,20 +7,21 @@ jQuery ->
     
     originalLeftEdgePosition = 0
     
-    # Add Rollover Images
+    # Add Rollover Images with callbacks
     profiles.each ->
       profileDiv = $(this).children('.profile')
       originalURL = profileDiv.attr('src').replace(/\.png/, '')
-      clonedImg1 = profileDiv.clone().attr
-        class: 'rollover'
-        src : originalURL+2+'.png'
-
-      clonedImg2 = profileDiv.clone().attr
-        class: 'rollover'
-        src : originalURL+3+'.png'
       
-      clonedImg1.prependTo $(this)
-      clonedImg2.prependTo $(this)
+      rolloverImages = $().add($(new Image()).attr({src : originalURL+'2.png'})).add($(new Image()).attr({src : originalURL+'3.png'}))
+      
+      rolloverImages.one('load', ()->
+        $(this).addClass('rollover');
+      ).each ->
+        if this.complete
+          $(this).trigger 'load'
+      
+
+      rolloverImages.prependTo $(this)
 
     # Add actions to rollovers
     profileImages.hover(
@@ -28,22 +29,23 @@ jQuery ->
         originalLeftEdgePosition = $(this).position()["left"]
         rolloverImages = $(this).siblings 'img.rollover'
         
-        rolloverImages.css({ left: originalLeftEdgePosition+'px'})
-        
-        if originalLeftEdgePosition > 500
-          direction = -1
-        else
-          direction = 1
-      
-        rolloverImages.first().animate
-          left: (originalLeftEdgePosition+direction*animateWidth)+'px'
-
-        rolloverImages.last().animate
-          left: (originalLeftEdgePosition+direction*animateWidth*2)+'px'
-
-        $(this).siblings('.description').animate
-          left : direction*5000+'px'
-          opacity: 0
+        if rolloverImages.length != 0
+          rolloverImages.css({ left: originalLeftEdgePosition+'px'})
+          
+          if originalLeftEdgePosition > 500
+            direction = -1
+          else
+            direction = 1
+          
+          rolloverImages.first().animate
+            left: (originalLeftEdgePosition+direction*animateWidth)+'px'
+          if rolloverImages.length > 1
+            rolloverImages.last().animate
+              left: (originalLeftEdgePosition+direction*animateWidth*2)+'px'
+          
+          $(this).siblings('.description').animate
+            left : direction*5000+'px'
+            opacity: 0
       ->
         originalLeftEdgePosition = $(this).position()["left"]
         rolloverImages = $(this).siblings 'img.rollover'
