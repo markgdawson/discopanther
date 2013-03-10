@@ -1,31 +1,35 @@
-#gallery
-  #thumbs
-    padding-top: 10px
-    overflow: hidden
-    img
+body.gallery
+  #lightbox
+    display: none
+  #gallery
+    #thumbs
+      padding-top: 10px
+      overflow: hidden
+      img
+        border: 1px solid gray
+        padding: 4px
+        background-color: white
+        cursor: pointer
+    
+    #largeImage
       border: 1px solid gray
       padding: 4px
       background-color: white
       cursor: pointer
-  
-  #largeImage
-    border: 1px solid gray
-    padding: 4px
-    background-color: white
-    cursor: pointer
-  
-  #thumbs img
-    float: left
-    margin-right: 6px
-  
-  #description
-    background: black
-    color: white
-    position: absolute
-    bottom: 0
-    padding: 10px 20px
-    width: 525px
-    margin: 5px
-  
-  #panel
-    position: relative
+      height: 80%
+    
+    #thumbs img
+      float: left
+      margin-right: 6px
+    
+    #description
+      background: black
+      color: white
+      position: absolute
+      bottom: 0
+      padding: 10px 20px
+      width: 525px
+      margin: 5px
+    
+    #panel
+      position: relative
