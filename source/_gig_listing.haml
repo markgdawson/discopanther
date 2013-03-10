@@ -1,0 +1,16 @@
+.gig{:class => (index%2 == 0 ? "even" : "odd")}
+  - if gig.has_key? "image"
+    %img.poster{:src => "images/gigs/#{gig['image']}", :width => '180px' }
+  - else
+    %img.poster{:src => "images/gigs/NoPoster.jpg", :width => '180px', :height => '290px' }
+  .description
+    %h1=gig[:name]
+    %p=gig[:venue]
+    %p= gig[:display_date]
+    - if gig.has_key?("website")
+      %p
+        %a.website{:href => gig["website"]}= "Visit Website"
+    - if gig.has_key?("fb_event")
+      %p
+        %a.fb_event{:href => "https://www.facebook.com/events/#{gig["fb_event"]}"}
+          %img{:src=>"images/facebook_logo.png", :alt => "Join Facebook Event" }

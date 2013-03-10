@@ -4,8 +4,6 @@
     
 - data.panthers.each_with_index do |panther, index|
   .profile{:class => (index%2 == 0 ? "even" : "odd")}
-    %img.rollover{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}3.png", :width => '180px' }
-    %img.rollover{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}2.png", :width => '180px' }
     %img.profile{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}.png", :width => '180px' }
     .description
       %h1=panther["name"]
@@ -20,6 +18,14 @@
     profileImages = $('img.profile');
     var originalLeftEdgePosition;
     animateWidth = profileImages.first().width()+45;
+    // add rollover images
+    $('.profile').each(function() {
+      clonedImg = $(this).children('.profile').clone().attr('class','rollover');
+      originalURL = clonedImg.attr('src').replace(/\.png/, '');
+      clonedImg.attr('src',originalURL+2+'.png').appendTo($(this))
+    });
+    
+    // add actions to
     profileImages.hover(function() {
       
       originalLeftEdgePosition = $(this).position()["left"];
@@ -43,5 +49,5 @@
       rolloverImages.animate({ left: originalLeftEdgePosition+'px' });
       
       $(this).siblings('.description').animate({ left : '0px', opacity: 1 });
-    })
+    });
   });
