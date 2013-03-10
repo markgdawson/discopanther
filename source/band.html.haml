@@ -4,12 +4,12 @@
     
 - data.panthers.each_with_index do |panther, index|
   .profile{:class => (index%2 == 0 ? "even" : "odd")}
-    %img.profile{:src => "images/panthers/images/#{panther['name'].gsub(' ','')}.png", :width => '180px' }
+    %img.profile{:src => "/images/panthers/images/#{panther['name'].gsub(' ','')}.png", :width => '180px' }
     .description
       %h1=panther["name"]
       %p.latin=panther["latin"]
       %p=panther["bio"]
       - if panther.has_key?("fb_event")
-        %a.fb_event{:href => "https://www.facebook.com/events/#{panther["fb_event"]}", :alt => "Join Facebook Event" }
+        %a.fb_event{:href => "https://www.facebook.com/events/#{panther["fb_event"]}" }
       - if panther.has_key?("website")
         %a.website{:href => panther["website"]}= "Visit Website"

@@ -7,8 +7,8 @@ jQuery ->
          artist:'6ix Toys'
          duration:'0:30'
       ,
-         mp3:'songs/there_it_is.mp3'
-         oga:'songs/there_it_is.ogg'
+         mp3:'/songs/there_it_is.mp3'
+         oga:'/songs/there_it_is.ogg'
          title:'There It Is'
          duration:'0:30'
       ],

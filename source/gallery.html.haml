@@ -3,8 +3,8 @@
 #imageGallery
   - Dir['source/images/gallery/large/*'].each do |path|
     - filename = File.basename(path)
-    %a{ :href => "images/gallery/large/#{filename}", :rel => "lightbox[plants]", :title => "Click on the right side of the image to move forward." }
-      %img{ :src => "images/gallery/thumbs/#{filename}" }
+    %a{ :href => "/images/gallery/large/#{filename}", :rel => "lightbox[plants]", :title => "Click on the right side of the image to move forward." }
+      %img{ :src => "/images/gallery/thumbs/#{filename}" }
 
 :javascript
   $(function() {
