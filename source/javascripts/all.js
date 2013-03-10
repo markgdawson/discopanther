@@ -1,1 +1,6 @@
-//= require_tree .
+//= require "jquery.nivo.slider"
+//= require "jquery.fancybox"
+//= require "jquery.jplayer.min"
+//= require "myplaylist"
+//= require "ttw-music-player"    
+//= require "band"
