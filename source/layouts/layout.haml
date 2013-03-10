@@ -30,7 +30,7 @@
           %a{:href => "https://soundcloud.com/discopanther-1", :target => "_blank"} Soundcloud Page
         - %w( index band gigs media gallery).each_with_index do |page,index|
           %li{:id => "menu-#{index+1}", :class => ( current_page.path == "#{page}.html") ? "selected" : ""}
-            %a.menuitem{:href => "#{page}.html"}= page
+            %a.menuitem{:href => "#{page}"}= page
         %li#menu-6{:class => ( current_page.path == "contact.php") ? "selected" : ""}
           %a{:href => "contact.php"} contact
     #current
