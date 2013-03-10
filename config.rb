@@ -54,6 +54,8 @@ set :js_dir, 'javascripts'
 
 set :images_dir, 'images'
 
+set :haml, { :ugly => true }
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
@@ -62,8 +64,8 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
   
-  # Minify HTML
-  activate :minify_html
+  # Pretty URLs
+  activate :directory_indexes
 
   # Enable cache buster
   # activate :cache_buster
