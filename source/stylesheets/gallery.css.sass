@@ -1,6 +1,27 @@
+$thumbnail_dimensions: 100px
+$thumbnail_magnification: 30px
+
+@import "compass/css3/border-radius"
+
 body.gallery
   #lightbox
     display: none
+  
+  #imageGallery a
+    float: left
+    display: block
+    width: $thumbnail_dimensions
+    height: $thumbnail_dimensions
+    &:hover
+      position: relative
+      left: -1*$thumbnail_magnification
+      top: -1*$thumbnail_magnification
+      img
+        width: $thumbnail_dimensions + 2*$thumbnail_magnification
+        height: $thumbnail_dimensions + 2*$thumbnail_magnification
+        border: 1px solid white 
+        @include border-radius
+
   #gallery
     #thumbs
       padding-top: 10px
