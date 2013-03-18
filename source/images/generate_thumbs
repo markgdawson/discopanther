@@ -1,0 +1,6 @@
+#!/bin/bash
+rm -rf gallery/thumbs/*
+for x in `ls gallery/large/` 
+do
+  convert -define jpeg:size=200x200 gallery/large/$x -thumbnail '100x100^' -gravity north  -extent 100x100 gallery/thumbs/$x
+done
