@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     POpen4 (0.1.4)
       Platform (>= 0.4.0)
@@ -29,6 +29,7 @@ GEM
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
     i18n (0.6.4)
+    libv8 (3.11.8.13)
     listen (0.7.3)
     maruku (0.6.1)
       syntax (>= 1.0.0)
@@ -81,6 +82,7 @@ GEM
     rack-test (0.6.2)
       rack (>= 1.0)
     rb-fsevent (0.9.3)
+    ref (1.0.2)
     sass (3.2.7)
     sinatra (1.3.5)
       rack (~> 1.4)
@@ -95,6 +97,9 @@ GEM
       sprockets (~> 2.0)
       tilt (~> 1.1)
     syntax (1.0.0)
+    therubyracer (0.11.4)
+      libv8 (~> 3.11.8.12)
+      ref
     thor (0.15.4)
     tilt (1.3.5)
     uglifier (1.2.7)
@@ -112,3 +117,4 @@ DEPENDENCIES
   activesupport
   middleman (~> 3.0.6)
   middleman-minify-html
+  therubyracer
