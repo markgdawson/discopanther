@@ -1,0 +1,3 @@
+[submodule "source/facebook-php-sdk"]
+	path = source/facebook-php-sdk
+	url = https://github.com/facebook/facebook-php-sdk.git
