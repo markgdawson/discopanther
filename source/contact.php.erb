@@ -18,14 +18,14 @@ if(empty($_POST['name'])  &&
      $errors .= "\n all fields are required";
    }
 
-   $name = $_POST['name']; 
-   $email_address = $_POST['email']; 
-   $message = $_POST['message']; 
-   $tel = $_POST['tel']; 
+   $name = htmlspecialchars($_POST['name']); 
+   $email = htmlspecialchars($_POST['email']); 
+   $message = htmlspecialchars($_POST['message']); 
+   $tel = htmlspecialchars($_POST['tel']); 
 
    if (!preg_match(
    "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
-   $email_address))
+   $email))
    {
        $errors .= "\n invalid email address";
        $show_page = true;
@@ -41,7 +41,7 @@ if(empty($_POST['name'])  &&
   $accesstoken = 'BAACtOKsjdDcBAERHaZC7wZAc2tMLUt38nBfr4wPind4g0ZATKLus2n2PMsoZBL0ZBBYtpmtYZCjB1YFByNveBI3w6wMiG4874ViBODH20HS6YBkERw7ahKNd5bBIcEyBVJSvkaOz9ggobLknAy18Hj4BuZCuArLUHVjA1ZBaWkPUgyFEkopxQJct';
   $facebook->setAccessToken($accesstoken);
 
-       $facebook->api('/495374493844670/feed', 'POST', array('message'=> "$name ($email_address) ($tel) => $message"));
+       $facebook->api('/495374493844670/feed', 'POST', array('message'=> "------ DiscoPanther.com Email ---------\n   name: $name \n   email: $email\n   Phone: $tel\n-----------------------------\n$message\n-----------------------------"));
        
        $show_thanks = true;
    } 
