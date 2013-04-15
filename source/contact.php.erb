@@ -33,15 +33,7 @@ if(empty($_POST['name'])  &&
 
    if( empty($errors))
    {
-       // Create our Application instance (replace this with your appId and secret).
-       $facebook = new Facebook(array(
-         'appId'  => '190458901001271',
-         'secret' => '89c78beb10eeddc8d096efa2db6f25e1',
-       ));
-  $accesstoken = 'BAACtOKsjdDcBAHoS6gwrcw2MzGbONvVBKyYQcvNZA5Wi3vuZBOESYIQKaWlCEfAzXM2nesnNBXKUXENsEHVfpdLttuAFoPrzGGjhwidNbyd5BRHUiVFvZArvuMp0UveTLF9nco7Ii2ulnr3oFpZBm0wCGPgufMZAVOYjhlleVZAjpgcdd6wQn2';
-  $facebook->setAccessToken($accesstoken);
-
-       $facebook->api('/495374493844670/feed', 'POST', array('message'=> "********* DiscoPanther.com Mail!! ***********\n   name: $name \n   email: $email\n   Phone: $tel\n\n$message\n"));
+       $facebook->api('/431535860268159/feed', 'POST', array('message'=> "********* DiscoPanther.com Mail!! ***********\n   name: $name \n   email: $email\n   Phone: $tel\n\n$message\n"));
        
        $show_thanks = true;
    } 
