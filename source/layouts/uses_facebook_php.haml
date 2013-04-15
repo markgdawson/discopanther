@@ -29,11 +29,9 @@
           %a{:href => "http://twitter.com/itsdiscopanther", :target => "_blank"} Twitter Page
         %li#menu-soundcloud
           %a{:href => "https://soundcloud.com/discopanther-1", :target => "_blank"} Soundcloud Page
-        - %w( index band gigs media gallery).each_with_index do |page,index|
-          %li{:id => "menu-#{index+1}", :class => ( current_page.path == "#{page}.html") ? "selected" : ""}
-            = link_to page, "/#{page}.html", :class => 'menuitem'
-        %li#menu-6{:class => ( current_page.path == "contact.html") ? "selected" : ""}
-          = link_to "contact", "/contact.php", :class => 'menuitem'
+        - [ "index.html", "band.html", "gigs.html", "media.html", "gallery.html", "contact.php" ].each_with_index do |page,index|
+          %li{:id => "menu-#{index+1}", :class => ( current_page.path == page) ? "selected" : ""}
+            = link_to page, "/#{page}", :class => 'menuitem'
     #current
     #content
       = yield
