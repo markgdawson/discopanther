@@ -1,4 +1,16 @@
 -
+  image: 'LongleatHorseTrials.jpg'
+  name: 'Longleat Horse Trials'
+  venue: 'The Longleat Estate, Wiltshire'
+  date: '30/8/2013'
+  website: 'http://www.longleat-horse-trials.co.uk/'
+-
+  image: 'BimbleBandana.jpg'
+  name: 'Bimble Bandana'
+  venue: 'Brighton'
+  date: '4/8/2013'
+  website: 'http://www.bimblebandada.com/'
+-
   image: 'HaggisHorns.jpeg'
   name: 'Funk Junkkies'
   venue: 'The Garage Venue, Swansea'
@@ -12,12 +24,6 @@
   website: 'http://www.boomtownfair.co.uk/'
   fb_event: 'https://www.facebook.com/boomtownfair1'
 -
-  image: 'RiversidePoster.jpg'
-  name: 'Disco Panther at Riverside'
-  venue: 'Riverside Caravan Park'
-  date: '3/08/2013'
-  website: 'http://www.riversideswansea.com'
--
   image: 'Nozstock.jpg'
   name: 'Nozstock Festival 2013'
   venue: 'Bromyard, Herefordshire'
@@ -28,7 +34,7 @@
   image: 'RiversidePoster.jpg'
   name: 'Disco Panther at Riverside'
   venue: 'Riverside Caravan Park'
-  date: '24/5/2013'
+  date: '25/5/2013'
   website: 'http://www.riversideswansea.com'
 -
   image: 'logo-maggies.jpg'

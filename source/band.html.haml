@@ -3,7 +3,7 @@
     Watch out sex kittens, word on the street is there's a new cat in town called Disco Panther. They've been diggin in the crates and found hidden Funk Disco gems from East to West Coast, Europe and our very own shores. Disco Panther are new to the UK Funk scene and between them they've been causing a stir with powerful ass moving performances.
     
 - data.panthers.each_with_index do |panther, index|
-  .profile{:class => (index%2 == 0 ? "even" : "odd")}
+  .profile{:id => panther["name"].gsub(' ',''), :class => (index%2 == 0 ? "even" : "odd")}
     %img.profile{:src => "/images/panthers/images/#{panther['name'].gsub(' ','')}.png", :width => '180px' }
     .description
       %h1=panther["name"]
