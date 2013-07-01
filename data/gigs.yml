@@ -1,4 +1,11 @@
 -
+  image: 'bayview.jpg'
+  name: 'Bay View Panther'
+  venue: 'The Bay View Inn, Mumbles Road'
+  date: '13/7/2013'
+  website: 'http://www.www.bayviewbar.co.uk/'
+  fb_event: 387755581345712
+-
   image: 'LongleatHorseTrials.jpg'
   name: 'Longleat Horse Trials'
   venue: 'The Longleat Estate, Wiltshire'
