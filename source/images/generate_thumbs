@@ -1,6 +1,49 @@
-#!/bin/bash
-rm -rf gallery/thumbs/*
-for x in `ls gallery/large/` 
-do
-  convert -define jpeg:size=200x200 gallery/large/$x -thumbnail '100x100^' -gravity north  -extent 100x100 gallery/thumbs/$x
-done
+#!/Users/mark/.rvm/rubies/ruby-1.8.7-p371/bin/ruby
+require 'rubygems'
+require 'RMagick'
+require 'yaml'
+
+Dir.chdir 'source'
+
+files = {}
+
+idx = 1
+images_count = Dir[File.join('images/gallery/large/*.[jJ][pP][gG]')].select{|a| !(a =~ /thumb\.jpg$/) && !(a =~ /large\.jpg$/) }.length
+
+Dir['images/portfolio/*'].each do |type_fldr|
+  type = File.basename(type_fldr)
+  files[type] = []
+  Dir[File.join(type_fldr,'*')].select{|a| a=~ / /}.each do |file|
+    File.rename(file, file.gsub(/ /,''))
+  end
+  projects = Dir[File.join(type_fldr,'*')]
+  projects.each do |project|
+    puts "PROJECT: #{project}"
+    images = Dir[File.join(project,'*')].select{|a| !(a =~ /thumb\.jpg$/) && !(a =~ /large\.jpg$/) && a =~ /\.[jJ][pP][gG]$/  }[0..6]
+
+    title_file= File.join(project, 'name.txt')
+    unless File.exists?(title_file)
+      File.open(title_file, 'w') do |file|
+        file.puts File.basename(project)
+      end
+    end
+    
+    files[type].push({ :title => File.read(title_file), :images => images, :desc => File.read(File.join(project,'description.txt')) })
+
+    images.each do |path|
+
+      puts "#{idx} of #{images_count} -#{path}"
+      idx+=1
+
+      unless File.exist?(path+".large.jpg") && File.exist?(path+".thumb.jpg")
+        img = Magick::Image.read(path).first
+        img.auto_orient.resize_to_fill(592,350).write(path+".large.jpg")
+        img.auto_orient.resize_to_fill(68,40).write(path+".thumb.jpg")
+      end
+    end
+  end
+end
+
+File.open('../data/projects.yml', 'w') do |file|
+  file.puts files.to_yaml
+end
