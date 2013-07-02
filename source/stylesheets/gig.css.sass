@@ -10,7 +10,7 @@ $default-border-radius: 15px
 
 @import "compass/css3/border-radius"
 
-body.band, body.gigs
+body.band
   .future_gigs, .past_gigs
     border: 2px solid white
     @include border-radius
@@ -22,7 +22,7 @@ body.band, body.gigs
     position: relative
     margin: $spacing_between_boxes 0
     img.profile, img.poster, img.rollover
-      border: 1px solid white
+      border: 3px solid white
       height: $image_height
       width: $image_width
       position:  absolute
@@ -33,17 +33,12 @@ body.band, body.gigs
       cursor: hand
     .description
       position: relative
-      border: 2px solid white
+      border: 0px solid white
       @include border-radius
       padding: 0px $description_padding
       margin-top: $description_padding_top
       margin-bottom: $description_padding_top
       min-height: $image_height - $description_padding_top - $description_padding_top
-      h1, p
-        margin-top: 15px
-      p.latin
-        font-style: italic
-        margin-top: 0px
     &.even
       float: left
       .description
@@ -58,3 +53,34 @@ body.band, body.gigs
         padding-right: $image_width + $image_horizontal_offset + $image_horizontal_offset
       img
         right: $image_horizontal_offset
+        
+
+body.gigs
+  .gig
+    float: left
+    width: 180px
+    padding: 15px 20px 0 0
+  .future_gigs, .past_gigs
+    clear: both
+  h1
+    font-family: 'Josefin Sans', cursive
+    margin-top: 15px
+  p.latin
+    font-style: italic
+    margin-top: 0px
+  p
+    font-family: 'Kite One', sans-serif
+    line-height: 20px
+    margin-top: 15px
+body.band .description
+  h1
+    font-family: 'Kaushan Script', cursive
+    margin-top: 15px
+  p.latin
+    font-style: italic
+    margin-top: 0px
+  p
+    font-family: 'Kite One', sans-serif
+    line-height: 20px
+    margin-top: 15px
+  

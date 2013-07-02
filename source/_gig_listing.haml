@@ -3,7 +3,7 @@
     %img.poster{:src => "/images/gigs/#{gig['image']}", :width => '180px' }
   - else
     %img.poster{:src => "/images/gigs/NoPoster.jpg", :width => '180px', :height => '290px' }
-  .description
+  .description{:style => 'display: none'}
     %h1=gig[:name]
     %p=gig[:venue]
     %p= gig[:display_date]
