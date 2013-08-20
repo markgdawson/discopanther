@@ -1,4 +1,18 @@
 -
+  image: 'bambu.jpg'
+  name: 'Beach Panthers'
+  venue: 'Bambu Beach Bar, Wind St, Swansea'
+  date: '16/8/2013'
+  website: 'https://www.facebook.com/bambubeachbar'
+  fb_event: 548729915183456
+-
+  image: 'yardpanthers.jpg'
+  name: 'The Yardpanthers'
+  venue: 'Yard Bar & Kitchen, Cardiff CF10 1AD '
+  date: '17/8/2013'
+  website: 'https://www.facebook.com/yardcardiff'
+  fb_event: 578910782159653
+-
   image: 'bayview.jpg'
   name: 'Bay View Banter'
   venue: 'The Bay View Inn, Mumbles Road'
