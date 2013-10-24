@@ -1,4 +1,26 @@
 -
+  name: 'Official Panther'
+  venue: 'The Office, Swansea'
+  date: '15/11/2013'
+  image: 'theOffice2013.jpg'
+-
+  image: 'NYE2012.jpeg'
+  name: 'New Years Eve'
+  venue: 'The Garage Venue, Swansea'
+  date: '31/12/2013'
+-
+  image: 'RandF.jpg'
+  name: 'The Rock & Funktrain'
+  venue: 'The Rock & Fountain Pub, Newton, Swansea'
+  date: '5/10/2013'
+  fb_event: 559665800749324
+-
+  image: 'garage2013.jpg'
+  name: 'Disco Panther Garage Band Extravaganza'
+  venue: 'The Garage Music Venue, Swansea'
+  date: '4/10/2013'
+  fb_event: 558969167501992
+-
   image: 'bambu.jpg'
   name: 'Beach Panthers'
   venue: 'Bambu Beach Bar, Wind St, Swansea'
@@ -19,12 +41,6 @@
   date: '13/7/2013'
   website: 'http://www.www.bayviewbar.co.uk/'
   fb_event: 387755581345712
--
-  image: 'LongleatHorseTrials.jpg'
-  name: 'Longleat Horse Trials'
-  venue: 'The Longleat Estate, Wiltshire'
-  date: '30/8/2013'
-  website: 'http://www.longleat-horse-trials.co.uk/'
 -
   image: 'BimbleBandana.jpg'
   name: 'Bimble Bandana'
